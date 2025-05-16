@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>रक्षा बंधन की शुभकामनाएं</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@700&display=swap');
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffebee;
+            background-image: radial-gradient(#ff8a80 1px, transparent 1px);
+            background-size: 20px 20px;
+            overflow-x: hidden;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        
+        .ad-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 5px 0;
+            background: white;
+        }
+        
+        .top-ad {
+            height: 50px;
+        }
+        
+        .content-wrapper {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 100%;
+            padding: 10px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .wish-text {
+            font-family: 'Pacifico', cursive;
+            font-size: 2rem;
+            color: #d81b60;
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(255, 235, 59, 0.7);
+            animation: pulse 2s infinite;
+        }
+        
+        .gif-container {
+            margin: 10px auto;
+            max-width: 280px;
+            border: 3px solid #f48fb1;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(244, 143, 177, 0.7);
+            padding: 5px;
+            background: white;
+            flex-shrink: 0;
+        }
+        
+        .gif-container img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        .message-box {
+            background-color: white;
+            border: 2px dashed #f06292;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 10px auto;
+            max-width: 90%;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+        
+        .sender-name {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: #c2185b;
+            margin-bottom: 5px;
+        }
+        
+        .from-text {
+            font-style: italic;
+            color: #e91e63;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .wishes-text {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.4;
+        }
+        
+        .input-box {
+            margin: 15px auto;
+            max-width: 90%;
+            flex-shrink: 0;
+        }
+        
+        .input-box p {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+        
+        .input-box input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 2px solid #f48fb1;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            outline: none;
+            text-align: center;
+        }
+        
+        .share-btn {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 12px 0;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1rem;
+            margin: 15px auto;
+            cursor: pointer;
+            width: 100%;
+            max-width: 280px;
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            flex-shrink: 0;
+        }
+        
+        .share-btn:hover {
+            background-color: #128C7E;
+        }
+        
+        .heart {
+            position: absolute;
+            pointer-events: none;
+            animation: float 4s ease-in-out infinite;
+            opacity: 0.7;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+            50% { transform: translateY(-20px) rotate(10deg); opacity: 1; }
+            100% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+        }
+        
+        .glitter {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: gold;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: glitter 1s linear infinite;
+        }
+        
+        @keyframes glitter {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.5); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .done-btn {
+            background-color: #f48fb1;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            font-size: 1rem;
+            margin-left: 8px;
+            cursor: pointer;
+            vertical-align: middle;
+            transition: all 0.3s;
+        }
+        
+        .done-btn:hover {
+            background-color: #f06292;
+            transform: scale(1.1);
+        }
+        
+        .input-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        
+        .bottom-ad {
+            height: 50px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Ad -->
+    <div class="ad-container top-ad">
+        <script type="text/javascript">
+            atOptions = {
+                'key' : 'a2ddf364d20f159e892d8539463b769d',
+                'format' : 'iframe',
+                'height' : 50,
+                'width' : 320,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//rugbymentalads.com/a2ddf364d20f159e892d8539463b769d/invoke.js"></script>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="container">
+            <h1 class="wish-text">रक्षा बंधन की हार्दिक शुभकामनाएं</h1>
+            
+            <div class="gif-container">
+                <img src="https://images.ctfassets.net/v2a2klvd105s/3FyBrFUupPhJcAR6sdHS5z/f81b4bca62461cde5081ffe4275b7d71/rakshabandhan.gif" alt="रक्षा बंधन GIF">
+            </div>
+            
+            <div class="message-box" id="messageBox">
+                <div class="sender-name" id="displayName">किसी खास के लिए</div>
+                <div class="from-text" id="fromText">की तरफ से</div>
+                <div class="wishes-text">आपको रक्षा बंधन की ढेर सारी शुभकामनाएं! हमारा बंधन हर साल और मजबूत होता रहे।</div>
+            </div>
+            
+            <div class="input-box">
+                <p>अपना नाम डालकर शुभकामनाएं व्यक्तिगत बनाएं:</p>
+                <div class="input-container">
+                    <input type="text" id="nameInput" placeholder="आपका नाम">
+                    <button class="done-btn" id="doneBtn">✓</button>
+                </div>
+            </div>
+            
+            <button class="share-btn" id="shareBtn">शुभकामनाएं भेजें</button>
+        </div>
+    </div>
+
+    <!-- Bottom Ad -->
+    <div class="ad-container bottom-ad">
+        <script async="async" data-cfasync="false" src="//rugbymentalads.com/4dcf71b2fb88b9d73f1cbe0833005906/invoke.js"></script>
+        <div id="container-4dcf71b2fb88b9d73f1cbe0833005906"></div>
+    </div>
+
+    <!-- First Ad (hidden) -->
+    <div style="display:none;">
+        <script type='text/javascript' src='//rugbymentalads.com/d7/45/f4/d745f4356845023bbe4acaa896750772.js'></script>
+    </div>
+
+    <script>
+        // Adjust content height based on viewport
+        function adjustLayout() {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+            
+            // Ensure content fits without scrolling
+            const content = document.querySelector('.content-wrapper');
+            const headerHeight = document.querySelector('.top-ad').offsetHeight;
+            const footerHeight = document.querySelector('.bottom-ad').offsetHeight;
+            content.style.maxHeight = `calc(100vh - ${headerHeight + footerHeight}px)`;
+        }
+        
+        // Create floating hearts
+        function createHearts() {
+            const heart = ['❤️', '💖', '💝', '💗', '💓'];
+            
+            setInterval(() => {
+                const h = document.createElement('div');
+                h.className = 'heart';
+                h.innerHTML = heart[Math.floor(Math.random() * heart.length)];
+                h.style.left = Math.random() * 100 + 'vw';
+                h.style.top = Math.random() * 100 + 'vh';
+                h.style.fontSize = (Math.random() * 15 + 8) + 'px';
+                h.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                document.body.appendChild(h);
+                
+                setTimeout(() => {
+                    h.remove();
+                }, 5000);
+            }, 400);
+        }
+        
+        // Create glitter effects
+        function createGlitter() {
+            setInterval(() => {
+                const g = document.createElement('div');
+                g.className = 'glitter';
+                g.style.left = Math.random() * 100 + 'vw';
+                g.style.top = Math.random() * 100 + 'vh';
+                g.style.animationDelay = Math.random() + 's';
+                document.body.appendChild(g);
+                
+                setTimeout(() => {
+                    g.remove();
+                }, 1000);
+            }, 150);
+        }
+        
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            adjustLayout();
+            createHearts();
+            createGlitter();
+            
+            const nameInput = document.getElementById('nameInput');
+            const doneBtn = document.getElementById('doneBtn');
+            const displayName = document.getElementById('displayName');
+            const fromText = document.getElementById('fromText');
+            const shareBtn = document.getElementById('shareBtn');
+            
+            // Handle done button click
+            doneBtn.addEventListener('click', function() {
+                if (nameInput.value.trim() !== '') {
+                    displayName.textContent = nameInput.value.trim();
+                    fromText.textContent = "की तरफ से";
+                    
+                    // Add some glitter effect
+                    for (let i = 0; i < 15; i++) {
+                        setTimeout(() => {
+                            const g = document.createElement('div');
+                            g.className = 'glitter';
+                            g.style.left = (Math.random() * 80 + 10) + 'vw';
+                            g.style.top = (Math.random() * 30 + 30) + 'vh';
+                            document.body.appendChild(g);
+                            
+                            setTimeout(() => {
+                                g.remove();
+                            }, 1000);
+                        }, i * 100);
+                    }
+                }
+            });
+            
+            // Handle share button click
+            shareBtn.addEventListener('click', function() {
+                if (nameInput.value.trim() === '') {
+                    alert('कृपया पहले अपना नाम डालें!');
+                    return;
+                }
+                
+                const currentUrl = window.location.href.split('?')[0];
+                const shareUrl = `${currentUrl}?from=${encodeURIComponent(nameInput.value.trim())}`;
+                
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'रक्षा बंधन की शुभकामनाएं',
+                        text: `${nameInput.value.trim()} ने आपको रक्षा बंधन की खास शुभकामनाएं भेजी हैं!`,
+                        url: shareUrl
+                    }).catch(err => {
+                        console.log('Error sharing:', err);
+                        copyToClipboard(shareUrl);
+                    });
+                } else {
+                    copyToClipboard(shareUrl);
+                }
+            });
+            
+            // Check for URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const fromParam = urlParams.get('from');
+            
+            if (fromParam) {
+                displayName.textContent = decodeURIComponent(fromParam);
+                fromText.textContent = "की तरफ से";
+                nameInput.value = decodeURIComponent(fromParam);
+            }
+            
+            // Helper function to copy to clipboard
+            function copyToClipboard(text) {
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                alert('लिंक कॉपी हो गया! इसे अपने प्रियजनों के साथ साझा करें।');
+            }
+        });
+        
+        window.addEventListener('resize', adjustLayout);
+    </script>
+</body>
+</html>
